@@ -20,7 +20,7 @@ export const getProducts = unstable_cache(
             offset
         }: GetProductParams
     ): Promise<Product[]> => {
-        console.log("CALLEDDDDDDDD")
+        
         const res = await fetch(`https://api.escuelajs.co/api/v1/products/?title=${search}&offset=${offset}&limit=${perPage}`);
         const data = await res.json();
         return data;
